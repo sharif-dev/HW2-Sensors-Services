@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/alarmPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="anna.whalealarmclock.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:background="@color/colorDarkBackGround"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        >
+
+        <ImageView
+            android:id="@+id/alarmIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_music" />
+
+        <TextView
+            android:id="@+id/name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center_horizontal"
+            android:text="Alarm"
+            android:textSize="64sp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/alarmIcon"
+            android:layout_toEndOf="@+id/alarmIcon" />
+
+        <TextView
+            android:id="@+id/name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name1"
+            android:layout_marginTop="-8dp"
+            android:layout_marginEnd="-163dp"
+            android:layout_marginRight="-163dp"
+            android:layout_toStartOf="@+id/name1"
+            android:layout_toLeftOf="@+id/name1"
+            android:gravity="center_horizontal"
+            android:text="Clock"
+            android:textColor="@color/colorYellow0"
+            android:textSize="60sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        >
+
+        <Switch
+            android:id="@+id/onOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="32dp"
+            android:layout_alignParentRight="true"
+            android:theme="@style/SwitchCompatTheme"
+            />
+
+        <Button
+            android:id="@+id/setAlarmButton"
+            android:layout_below="@+id/onOff"
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alarm_time"
+            android:drawableRight="@drawable/ic_clock"
+            android:drawablePadding="6dp"
+            android:clickable="true"
+            android:textSize="24sp"
+            android:padding="12dp"
+            android:background="@drawable/button_style"
+            android:drawableEnd="@drawable/ic_clock"
+            android:focusable="true" />
+
+        <LinearLayout
+            android:id="@+id/setSpeed"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_below="@+id/setAlarmButton"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/labelSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Angular Velocity (rad/sec):"
+                android:labelFor="@+id/speed"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp" />
+            <EditText
+                android:id="@+id/speed"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="0"
+                android:singleLine="true"
+                android:inputType="numberDecimal|numberSigned"
+                android:imeOptions="actionDone"
+                android:textColor="#000"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:backgroundTint="@color/colorDarkBackGround"
+                android:textCursorDrawable="@drawable/cursor"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/music_spinner"
+            android:layout_below="@+id/setSpeed"
+            android:layout_centerHorizontal="true"
+            style="@style/Widget.AppCompat.Spinner"
+            android:layout_height="?attr/dropdownListPreferredItemHeight"
+            android:layout_margin="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:spinnerMode="dialog"
+            android:background="@drawable/spinner_bg"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

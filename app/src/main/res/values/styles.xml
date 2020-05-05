@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+<!--        <item name="colorDarkBackGround">@color/colorDarkBackGround</item>-->
+<!--        <item name="colorBlue0">@color/colorBlue0</item>-->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item  name="colorAccent">@color/colorYellow0</item>
+        <item name="android:windowBackground">@color/colorDarkBackGround</item>
+    </style>
+    <style name="SwitchCompatTheme" >
+        <item name="colorSwitchThumbNormal">@color/colorDarkBackGround1</item>
+        <item name="colorControlActivated">@color/colorYellow0</item>
+    </style>
+</resources>
